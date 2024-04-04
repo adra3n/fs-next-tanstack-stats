@@ -1,0 +1,54 @@
+@keyframes fillAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fillAnimationLTR {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes fillAnimationRTL {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fill {
+  animation: fillAnimation 1s ease-out forwards;
+}
+
+.fillLTR {
+  animation: fillAnimationLTR 1s ease-out forwards;
+}
+
+.fillRTL {
+  animation: fillAnimationRTL 1s ease-out forwards;
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
