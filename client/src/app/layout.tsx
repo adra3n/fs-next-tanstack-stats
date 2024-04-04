@@ -6,9 +6,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Influencer Stats (Next,Tanstack)',
-  description: 'Developed by Sertac Kocagil',
+  title: 'Influencer Card',
+  description: 'Created by Sertac Kocagil',
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
