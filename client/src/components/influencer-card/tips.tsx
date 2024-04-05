@@ -29,7 +29,7 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
               {metric.type.toUpperCase()}
             </Badge>
             <div
-              className={`text-sm  ${
+              className={`sm:text-sm text-xs sm:text-start text-center ${
                 metric.type === 'story'
                   ? 'text-purple-300'
                   : metric.type === 'static'
