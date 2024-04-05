@@ -3,12 +3,12 @@ import { CardContent, Card } from '@/components/ui/card'
 import { ContentData } from '@/types/types'
 import { useQuery } from '@tanstack/react-query'
 import { calculateContentDetails, calculateMetrics } from '@/utils/calculations'
-import { fetchContentData } from '@/lib/apis'
-import { StatsCardHeader } from './influencer-card/header'
+import { fetchContentData } from '@/utils/apis'
+import { StatsCardHeader } from '@/components/influencer-card/header'
 import Spinner from '@/components/ui/spinner'
-import { CompareBars } from './influencer-card/compare-bars'
-import TopInfluencers from './influencer-card/top-influencers'
-import ContentTips from './influencer-card/tips'
+import { CompareBars } from '@/components//influencer-card/compare-bars'
+import TopInfluencers from '@/components/influencer-card/top-influencers'
+import ContentTips from '@/components/influencer-card/tips'
 
 export function InfluencerCard() {
   //query => influencerData

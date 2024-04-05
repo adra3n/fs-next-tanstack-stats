@@ -37,6 +37,17 @@
   }
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .fill {
   animation: fillAnimation 1s ease-out forwards;
 }
@@ -51,4 +62,8 @@
 
 .fade-in {
   animation: fade-in 1s ease-in-out;
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease-in-out;
 }

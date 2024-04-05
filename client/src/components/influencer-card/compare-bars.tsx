@@ -81,19 +81,17 @@ export function CompareBars({
           <div
             className={`flex flex-row md:justify-center justify-between text-${getColorForType(
               type
-            )}-500 font-medium  text-center lg:text-sm md:text-xs text-[0.7rem] sm:w-4/12 w-4/12`}
+            )}-700 font-medium  text-center lg:text-sm md:text-xs text-[0.7rem] sm:w-4/12 w-4/12`}
           >
-            <b className="md:w-3/12 2/12 font-semibold ">
-              {lastYearRelativeCounts[type]}
-            </b>
-            <b className="md:w-3/12 2/12">{lastYearCounts[type]}</b>
-            <div className="md:w-5/12 4/12 font-semibold ">
+            <p className="md:w-3/12 2/12  ">{lastYearRelativeCounts[type]}</p>
+            <p className="md:w-3/12 2/12 font-semibold">
+              {lastYearCounts[type]}
+            </p>
+            <div className="md:w-5/12 4/12 font-bold ">
               {type.toUpperCase()}
             </div>
-            <b className="md:w-3/12 2/12">{counts[type]}</b>
-            <b className="md:w-3/12 2/12 font-semibold  ">
-              {relativeCounts[type]}
-            </b>
+            <p className="md:w-3/12 2/12 font-semibold">{counts[type]}</p>
+            <p className="md:w-3/12 2/12   ">{relativeCounts[type]}</p>
           </div>
 
           <div className="flex flex-row items-center gap-1 md:w-5/12 w-4/12 justify-end">
@@ -102,7 +100,7 @@ export function CompareBars({
                 averageReachRateDifferences[type] >= 0
                   ? 'text-green-700'
                   : 'text-red-700'
-              }  sm:text-xs text-[0.6rem] text-end font-bold md:w-4/12   w-3/12 `}
+              }  md:text-xs text-[0.6rem] text-end font-bold md:w-4/12   w-3/12 `}
             >
               {averageReachRateDifferences[type] >= 0
                 ? `+${averageReachRateDifferences[type]}%`
