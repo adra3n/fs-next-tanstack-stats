@@ -9,6 +9,7 @@ import Spinner from '@/components/ui/spinner'
 import { CompareBars } from '@/components//influencer-card/compare-bars'
 import TopInfluencers from '@/components/influencer-card/top-influencers'
 import ContentTips from '@/components/influencer-card/tips'
+import PieChartSection from '@/components/influencer-card/chart'
 
 export function InfluencerCard() {
   //query => influencerData
@@ -55,15 +56,20 @@ export function InfluencerCard() {
           thisYearDetails={thisYearDetails}
           isLoading={isLoading}
         ></StatsCardHeader>
-
         <CompareBars
           thisYear={thisYear}
           thisYearDetails={thisYearDetails}
           lastYearDetails={lastYearDetails}
           isLoading={isLoading}
         />
+
         <TopInfluencers data={contentData} year={thisYear} />
         <ContentTips metrics={metrics} />
+
+        <PieChartSection
+          thisYearDetails={thisYearDetails}
+          lastYearDetails={lastYearDetails}
+        />
       </CardContent>
     </Card>
   )
