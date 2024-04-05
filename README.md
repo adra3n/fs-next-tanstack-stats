@@ -4,12 +4,12 @@ Backend: Node.js - Express - SQlite - Typescript
 ## Installing Project
 
 To install client follow these steps:
-2. Navigate into the project directory and `cd client`
-3. Install the dependencies: `npm install`
+1. Navigate into the project directory and `cd client`
+2. Install the dependencies: `npm install`
 
 To install server follow these steps:
-2. Navigate into the project directory and `cd server`
-3. Install the dependencies: `npm install`
+1. Navigate into the project directory and `cd server`
+2. Install the dependencies: `npm install`
 
 ## Using App
 
