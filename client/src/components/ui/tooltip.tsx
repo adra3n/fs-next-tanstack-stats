@@ -8,7 +8,7 @@ interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
 const Tooltip: React.FC<TooltipProps> = ({ text, position }) => {
   return (
     <div
-      className="absolute px-2 py-1 text-white text-xs rounded whitespace-nowrap z-10"
+      className="absolute px-2 py-1 text-white bg-gray-700 text-sm rounded whitespace-nowrap z-10"
       style={{ top: position.top, left: position.left }}
     >
       {text}
