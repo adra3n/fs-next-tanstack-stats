@@ -1,6 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express'
-
-import apiRoutes from './routes/api'
+import influencerData from './data'
 
 const app = express()
 
@@ -12,7 +11,10 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next()
 })
 
-app.use('/api', apiRoutes)
+// get => /api/influencer-data
+app.get('/api/influencer-data', (req: Request, res: Response) => {
+  res.json(influencerData)
+})
 
 //port
 const PORT = process.env.PORT || 8000
