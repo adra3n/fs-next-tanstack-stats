@@ -1,7 +1,7 @@
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts'
 import { CardFooter, CardHeader } from '../ui/card'
 
-const Colors = ['#93c5fd', '#fdba74', '#d8b4fe']
+const Colors = ['#d8b4fe', '#93c5fd', '#fdba74']
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {

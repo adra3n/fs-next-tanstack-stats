@@ -15,7 +15,7 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
         <div key={index} className={`slideIn ${styles.slideIn}`}>
           <div className="flex justify-between items-center">
             <Badge
-              className={`px-3 py-1  ${
+              className={`px-3 py-1 w-20  justify-center ${
                 metric.type === 'story'
                   ? 'bg-purple-300 hover:bg-purple-300/80'
                   : metric.type === 'reels'
@@ -50,7 +50,7 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
               {metric.change > 0 ? 'up' : 'down'} by {Math.abs(metric.change)}%
             </div>
             <Badge
-              className={`px-3 py-1 ${
+              className={`px-3 py-1 w-20 justify-center ${
                 metric.change > 0
                   ? 'bg-green-400 hover:bg-green-300/80'
                   : 'bg-red-400 hover:bg-red-300/80'
