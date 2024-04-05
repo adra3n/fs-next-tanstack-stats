@@ -34,8 +34,8 @@ const TopInfluencers: React.FC<TopInfluencersProps> = ({ data, year }) => {
   }
   return (
     <div className="flex flex-row justify-between items-center w-full h-16 sm:gap-5  my-5 sm:px-5 px-1 bg-gray-800 ">
-      <div className="flex justify-center items-center gap-1">
-        {topInfluencersThisYear.map((influencer, index) => (
+      <div className="flex justify-center items-center gap-1 w-1/3">
+        {topInfluencersThisYear?.map((influencer, index) => (
           <Badge
             key={index}
             className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-100 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
@@ -44,18 +44,18 @@ const TopInfluencers: React.FC<TopInfluencersProps> = ({ data, year }) => {
             }
             onMouseLeave={handleBadgeMouseLeave}
           >
-            {influencer.name}
+            {influencer.name ?? ' '}
           </Badge>
         ))}
       </div>
-      <div className=" font-light text-gray-100 text-center sm:text-sm text-[0.6rem]">
+      <div className=" font-light text-gray-100 text-center sm:text-sm text-[0.6rem] w-1/3">
         <p>
           <span className="font-extrabold ">TOP 3 INFLUENCERS</span> BY REACH
           RATE
         </p>
       </div>
-      <div className="flex   justify-center items-center gap-1">
-        {topInfluencersLastYear.map((influencer, index) => (
+      <div className="flex   justify-center items-center gap-1 w-1/3">
+        {topInfluencersLastYear?.map((influencer, index) => (
           <Badge
             key={index}
             className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-100 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
@@ -64,7 +64,7 @@ const TopInfluencers: React.FC<TopInfluencersProps> = ({ data, year }) => {
             }
             onMouseLeave={handleBadgeMouseLeave}
           >
-            {influencer.name}
+            {influencer.name ?? ' '}
           </Badge>
         ))}
         {tooltipText && (

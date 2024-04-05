@@ -185,9 +185,9 @@ export const calculateContentDetails = (
   //final obj
   return {
     thisYear: {
-      averageReachRates: thisYearDetails.averageReachRates,
-      counts: thisYearDetails.counts,
-      relativeCounts: thisYearDetails.relativeCounts,
+      averageReachRates: thisYearDetails?.averageReachRates,
+      counts: thisYearDetails?.counts,
+      relativeCounts: thisYearDetails?.relativeCounts,
       averageReachRateDifferences: calculateAverageReachRateDifferences(
         thisYear,
         thisYearData,
@@ -199,9 +199,9 @@ export const calculateContentDetails = (
       ),
     },
     lastYear: {
-      averageReachRates: lastYearDetails.averageReachRates,
-      counts: lastYearDetails.counts,
-      relativeCounts: lastYearDetails.relativeCounts,
+      averageReachRates: lastYearDetails?.averageReachRates,
+      counts: lastYearDetails?.counts,
+      relativeCounts: lastYearDetails?.relativeCounts,
     },
   }
 }

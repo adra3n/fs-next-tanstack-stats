@@ -20,18 +20,28 @@ export function InfluencerCard() {
   } = useQuery<any>({
     queryKey: ['contentData'],
     queryFn: fetchContentData,
+    staleTime: 30000, // 30 secs
+    refetchOnWindowFocus: false, // disable refetching on wndow focus
   })
 
   if (isLoading)
     return (
-      <div className="w-full h-full flex justify-center items-center">
-        <Spinner />
+      <div className="w-screen h-screen flex justify-center items-center">
+        <Card className="flex my-8 py-6 bg-gray-800 justify-center items-center border-0 sm:rounded-lg h-3/6 mx-auto shadow-lg lg:w-7/12 md:w-8/12 sm:w-10/12 w-[95vw]">
+          <CardContent>
+            <Spinner className="flex mx-auto" />
+          </CardContent>
+        </Card>
       </div>
     )
   if (isError)
     return (
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="text-red-500">Error fetching data</div>
+      <div className="w-screen h-screen flex justify-center items-center">
+        <Card className="flex my-8 py-6 bg-gray-800 justify-center items-center border-0 sm:rounded-lg h-3/6 mx-auto shadow-lg lg:w-7/12 md:w-8/12 sm:w-10/12 w-[95vw]">
+          <CardContent>
+            <div className="text-red-500">Error fetching data</div>
+          </CardContent>
+        </Card>
       </div>
     )
 

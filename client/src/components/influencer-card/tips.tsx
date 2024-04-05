@@ -47,7 +47,8 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
                 ? 'Reels '
                 : 'All '}
               {metric.category === 'reachRate' ? 'Reach Rate is ' : 'Count is '}
-              {metric.change > 0 ? 'up' : 'down'} by {Math.abs(metric.change)}%
+              {metric?.change ?? 0 > 0 ? 'up' : 'down'} by{' '}
+              {Math.abs(metric?.change ?? 0)}%
             </div>
             <Badge
               className={`px-3 py-1 w-20 justify-center ${

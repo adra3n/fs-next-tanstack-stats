@@ -83,28 +83,30 @@ export function CompareBars({
               type
             )}-700 font-medium  text-center lg:text-sm md:text-xs text-[0.7rem] sm:w-4/12 w-4/12`}
           >
-            <p className="md:w-3/12 2/12  ">{lastYearRelativeCounts[type]}</p>
+            <p className="md:w-3/12 2/12  ">
+              {lastYearRelativeCounts[type] ?? 0}
+            </p>
             <p className="md:w-3/12 2/12 font-semibold">
-              {lastYearCounts[type]}
+              {lastYearCounts[type] ?? 0}
             </p>
             <div className="md:w-5/12 4/12 font-bold ">
-              {type.toUpperCase()}
+              {type?.toUpperCase() ?? ''}
             </div>
-            <p className="md:w-3/12 2/12 font-semibold">{counts[type]}</p>
-            <p className="md:w-3/12 2/12   ">{relativeCounts[type]}</p>
+            <p className="md:w-3/12 2/12 font-semibold">{counts[type] ?? 0}</p>
+            <p className="md:w-3/12 2/12   ">{relativeCounts[type] ?? 0}</p>
           </div>
 
           <div className="flex flex-row items-center gap-1 md:w-5/12 w-4/12 justify-end">
             <div
               className={`${
-                averageReachRateDifferences[type] >= 0
+                averageReachRateDifferences[type] ?? 0 >= 0
                   ? 'text-green-700'
                   : 'text-red-700'
               }  md:text-xs text-[0.6rem] text-end font-bold md:w-4/12   w-3/12 `}
             >
-              {averageReachRateDifferences[type] >= 0
-                ? `+${averageReachRateDifferences[type]}%`
-                : `${averageReachRateDifferences[type]}%`}
+              {averageReachRateDifferences[type] ?? 0 >= 0
+                ? `+${averageReachRateDifferences[type] ?? 0}%`
+                : `${averageReachRateDifferences[type] ?? 0}%`}
             </div>
             <ProgressBar
               progress={averageReachRates[type] ?? 0}

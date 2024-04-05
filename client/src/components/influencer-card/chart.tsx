@@ -27,14 +27,14 @@ export default function PieChartSection({
   thisYear,
 }: ChartProps) {
   const thisYearData = [
-    { name: 'Stories', value: thisYearDetails.counts.story },
-    { name: 'Reels', value: thisYearDetails.counts.reels },
-    { name: 'Static Posts', value: thisYearDetails.counts.static },
+    { name: 'Stories', value: thisYearDetails?.counts.story ?? 0 },
+    { name: 'Reels', value: thisYearDetails?.counts.reels ?? 0 },
+    { name: 'Static Posts', value: thisYearDetails?.counts.static ?? 0 },
   ]
   const lastYearData = [
-    { name: 'Stories', value: lastYearDetails.counts.story },
-    { name: 'Reels', value: lastYearDetails.counts.reels },
-    { name: 'Static Posts', value: lastYearDetails.counts.static },
+    { name: 'Stories', value: lastYearDetails?.counts.story ?? 0 },
+    { name: 'Reels', value: lastYearDetails?.counts.reels ?? 0 },
+    { name: 'Static Posts', value: lastYearDetails?.counts.static ?? 0 },
   ]
 
   return (

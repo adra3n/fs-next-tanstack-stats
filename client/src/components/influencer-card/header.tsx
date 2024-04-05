@@ -34,19 +34,19 @@ export function StatsCardHeader({
         {!isLoading && thisYearDetails ? (
           <div className="flex flex-row items-center gap-5">
             <div className="sm:text-3xl text-lg font-bold text-orange-200">
-              {averageReachRates.all}%
+              {averageReachRates.all ?? 0}%
             </div>
             <div className="flex gap-2 sm:flex-row flex-col">
               <span
                 className={`${
-                  averageReachRateDifferences.all >= 0
+                  averageReachRateDifferences.all ?? 0 >= 0
                     ? 'text-green-500'
                     : 'text-red-600'
                 }  text-xs font-semibold `}
               >
-                {averageReachRateDifferences.all >= 0
-                  ? `+${averageReachRateDifferences.all}% `
-                  : `${averageReachRateDifferences.all}% `}
+                {averageReachRateDifferences.all ?? 0 >= 0
+                  ? `+${averageReachRateDifferences.all ?? 0}% `
+                  : `${averageReachRateDifferences.all ?? 0}% `}
               </span>
               <span>in {thisYear}</span>
             </div>
