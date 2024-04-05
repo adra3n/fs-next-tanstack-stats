@@ -10,12 +10,11 @@ const Badge: React.FC<BadgeProps> = ({
   ...rest
 }) => {
   let badgeClasses =
-    'inline-flex items-center rounded-full border border-gray-200 px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 dark:border-gray-800 dark:focus:ring-gray-300'
+    'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold '
 
   switch (variant) {
     case 'secondary':
-      badgeClasses +=
-        ' border-transparent bg-gray-800 text-gray-50 hover:bg-gray-400/80'
+      badgeClasses += ' border-transparent bg-gray-800 text-gray-50 '
       break
     case 'red':
       badgeClasses +=
@@ -27,8 +26,7 @@ const Badge: React.FC<BadgeProps> = ({
       break
 
     default:
-      badgeClasses +=
-        ' border-transparent  bg-gray-50 text-gray-900 hover:bg-gray-100/80'
+      badgeClasses += ' border-transparent text-gray-900 '
   }
 
   return <div className={`${badgeClasses} ${className}`} {...rest} />

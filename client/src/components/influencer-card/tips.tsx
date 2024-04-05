@@ -19,7 +19,7 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
                 metric.type === 'story'
                   ? 'bg-purple-300 hover:bg-purple-300/80'
                   : metric.type === 'reels'
-                  ? 'bg-blue-300'
+                  ? 'bg-blue-300 hover:bg-blue-300/80'
                   : metric.type === 'static'
                   ? 'bg-orange-300 hover:bg-orange-300/80'
                   : 'bg-gray-200 hover:bg-gray-300/80'
@@ -51,7 +51,9 @@ const ContentTips: React.FC<ContentTipsProps> = ({ metrics }) => {
             </div>
             <Badge
               className={`px-3 py-1 ${
-                metric.change > 0 ? 'bg-green-400' : 'bg-red-400'
+                metric.change > 0
+                  ? 'bg-green-400 hover:bg-green-300/80'
+                  : 'bg-red-400 hover:bg-red-300/80'
               }`}
               variant="default"
             >
