@@ -38,7 +38,7 @@ const TopInfluencers: React.FC<TopInfluencersProps> = ({ data, year }) => {
         {topInfluencersThisYear.map((influencer, index) => (
           <Badge
             key={index}
-            className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-300 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
+            className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-100 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
             onMouseEnter={(event) =>
               handleBadgeMouseEnter(influencer.name, influencer.count, event)
             }
@@ -58,7 +58,7 @@ const TopInfluencers: React.FC<TopInfluencersProps> = ({ data, year }) => {
         {topInfluencersLastYear.map((influencer, index) => (
           <Badge
             key={index}
-            className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-300 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
+            className={`sm:h-10 sm:w-10 w-7 h-7 flex items-center justify-center bg-gray-100 text-gray-800 ${styles['fade-in']} hover:animate-spin`}
             onMouseEnter={(event) =>
               handleBadgeMouseEnter(influencer.name, influencer.count, event)
             }
