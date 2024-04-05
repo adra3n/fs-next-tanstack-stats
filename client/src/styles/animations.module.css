@@ -48,6 +48,34 @@
   }
 }
 
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideRight {
+  animation: slideRight 0.5s ease-in-out;
+}
+.slideLeft {
+  animation: slideLeft 1s ease-in-out;
+}
+
 .fill {
   animation: fillAnimation 1s ease-out forwards;
 }

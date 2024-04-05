@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { ContentData } from '@/types/types'
-import { getTopInfluencersByYear } from '@/utils/calculations'
+import { getTopInfluencersByYear } from '@/libs/calculations'
 import styles from '@/styles/animations.module.css'
 import Tooltip from '@/components/ui/tooltip'
 

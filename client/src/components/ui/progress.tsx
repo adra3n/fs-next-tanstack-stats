@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '@/styles/animations.module.css'
+
 interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {
   progress: number // %0-100
   variant?: 'default' | 'green' | 'purple' | 'orange' | 'blue'

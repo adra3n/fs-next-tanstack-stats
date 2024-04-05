@@ -1,6 +1,6 @@
 import React from 'react'
-import { Metric } from '@/types/types'
 import { Badge } from '@/components/ui/badge'
+import { Metric } from '@/types/types'
 import styles from '@/styles/animations.module.css'
 
 interface ContentTipsProps {

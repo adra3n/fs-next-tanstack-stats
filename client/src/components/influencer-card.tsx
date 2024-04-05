@@ -1,15 +1,15 @@
 'use client'
-import { CardContent, Card } from '@/components/ui/card'
-import { ContentData } from '@/types/types'
 import { useQuery } from '@tanstack/react-query'
-import { calculateContentDetails, calculateMetrics } from '@/utils/calculations'
-import { fetchContentData } from '@/utils/apis'
-import { StatsCardHeader } from '@/components/influencer-card/header'
+import { fetchContentData } from '@/libs/apis'
+import { CardContent, Card } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner'
+import { StatsCardHeader } from '@/components/influencer-card/header'
 import { CompareBars } from '@/components//influencer-card/compare-bars'
 import TopInfluencers from '@/components/influencer-card/top-influencers'
 import ContentTips from '@/components/influencer-card/tips'
 import PieChartSection from '@/components/influencer-card/chart'
+import { calculateContentDetails, calculateMetrics } from '@/libs/calculations'
+import { ContentData } from '@/types/types'
 
 export function InfluencerCard() {
   //query => influencerData
@@ -36,8 +36,11 @@ export function InfluencerCard() {
     )
 
   const thisYear = 2021
+
+  //how many tips from top and lowest metrics
   const tipCount = 2
 
+  //calculating all content details and saving them in an object
   const { thisYear: thisYearDetails, lastYear: lastYearDetails } =
     calculateContentDetails(
       thisYear,
@@ -45,6 +48,7 @@ export function InfluencerCard() {
       contentData?.filter((item: ContentData) => item.year === thisYear - 1)
     )
 
+  //calculating change metrics for tips section here
   const metrics = calculateMetrics(thisYearDetails, tipCount)
 
   console.log(metrics)
@@ -62,13 +66,12 @@ export function InfluencerCard() {
           lastYearDetails={lastYearDetails}
           isLoading={isLoading}
         />
-
         <TopInfluencers data={contentData} year={thisYear} />
         <ContentTips metrics={metrics} />
-
         <PieChartSection
           thisYearDetails={thisYearDetails}
           lastYearDetails={lastYearDetails}
+          thisYear={thisYear}
         />
       </CardContent>
     </Card>

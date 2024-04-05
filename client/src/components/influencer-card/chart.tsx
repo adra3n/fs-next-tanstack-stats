@@ -1,5 +1,6 @@
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from 'recharts'
 import { CardFooter, CardHeader } from '../ui/card'
+import { ContentDetails } from '@/types/types'
 
 const Colors = ['#d8b4fe', '#93c5fd', '#fdba74']
 
@@ -14,11 +15,17 @@ const CustomTooltip = ({ active, payload }: any) => {
 
   return null
 }
+interface ChartProps {
+  lastYearDetails: ContentDetails['lastYear']
+  thisYearDetails: ContentDetails['thisYear']
+  thisYear: number
+}
 
 export default function PieChartSection({
   lastYearDetails,
   thisYearDetails,
-}: any) {
+  thisYear,
+}: ChartProps) {
   const thisYearData = [
     { name: 'Stories', value: thisYearDetails.counts.story },
     { name: 'Reels', value: thisYearDetails.counts.reels },
@@ -82,8 +89,8 @@ export default function PieChartSection({
         </ResponsiveContainer>
       </div>
       <CardFooter className="justify-between text-center">
-        <p className="flex-1 pr-8">2020</p>
-        <p className="flex-1 pl-8">2021</p>
+        <p className="flex-1 pr-8">{thisYear - 1}</p>
+        <p className="flex-1 pl-8">{thisYear}</p>
       </CardFooter>
     </>
   )

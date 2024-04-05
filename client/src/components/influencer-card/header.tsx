@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge'
 import { CardTitle } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner'
 import { ContentDetails } from '@/types/types'
+import styles from '@/styles/animations.module.css'
 
 interface StatsCardHeaderProps {
   thisYear: number
@@ -20,14 +21,14 @@ export function StatsCardHeader({
     <div className="flex justify-between items-center mb-6 ">
       <CardTitle className="text-4xl font-bold ">
         <Badge
-          className="px-5 sm:pr-12 py-1 h-20 rounded-l-none "
+          className={`px-5 sm:pr-12 py-1 h-20 rounded-l-none ${styles.slideRight}`}
           variant="secondary"
         >
           <h1 className=" sm:text-4xl text-xl">REACH RATE</h1>
         </Badge>
       </CardTitle>
       <Badge
-        className="sm:px-4 pl-2 py-1 text-sm h-20 rounded-r-none"
+        className={`sm:px-4 pl-2 py-1 text-sm h-20 rounded-r-none ${styles.slideRight}`}
         variant="secondary"
       >
         {!isLoading && thisYearDetails ? (
