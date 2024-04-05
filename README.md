@@ -1,5 +1,10 @@
-Frontend: Next.js - Tanstack - Tailwind CSS - Typescript - Recharts
-Backend: Node.js - Express - SQlite - Typescript
+## Influencer Stats Comparison App
+
+#Frontend:
+Next.js - Tanstack - Tailwind CSS - Typescript - Recharts
+
+#Backend: 
+Node.js - Express - SQlite - Typescript
 
 ## Installing Project
 
